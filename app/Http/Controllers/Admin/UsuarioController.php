@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Usuario;
 use Illuminate\Support\Facades\Hash;
+use App\Events\UsuarioLogou;
 
 class UsuarioController extends Controller
 {
@@ -29,6 +30,9 @@ class UsuarioController extends Controller
         if ($usuario){
             if (Hash::check($request->senha, $usuario->senha)){
                 Auth::loginUsingId($usuario->id);
+
+                \Event::fire(new UsuarioLogou(Auth::user()));
+                
                 return redirect()->route('admin.index');
             }
         }else{

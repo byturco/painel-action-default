@@ -70,7 +70,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <!-- Main content -->
                  <section class="content">
-
+                    @if(Session::has('message'))
+                        <div class="alert alert-{{ Session::get('message')['class'] }}">
+                            {{ Session::get('message')['content'] }}
+                        </div>
+                    @endif
                     <!-- Your Page Content Here -->
                     @yield('content')
 

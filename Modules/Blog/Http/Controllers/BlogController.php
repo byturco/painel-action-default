@@ -5,6 +5,8 @@ namespace Modules\Blog\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Modules\Blog\Entities\Post;
+use Modules\Blog\Events\UserLogged;
 
 class BlogController extends Controller
 {
@@ -21,9 +23,9 @@ class BlogController extends Controller
      * Show the form for creating a new resource.
      * @return Response
      */
-    public function create()
+    public function criar()
     {
-        return view('blog::create');
+        return view('blog::formularios.criar.post');
     }
 
     /**
@@ -31,8 +33,22 @@ class BlogController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function salvar(Request $request)
     {
+        event(new UserLogged());
+
+        Post::create([
+            'titulo' => $request->titulo,
+            'descricao' => $request->descricao,
+            'imagem' => $request->imagem,
+        ]);
+
+        \Session::flash('message', [
+            'content' => 'Post publicado com sucesso.',
+            'class' => 'success'
+        ]);
+
+        return redirect()->route('post.criar');
     }
 
     /**

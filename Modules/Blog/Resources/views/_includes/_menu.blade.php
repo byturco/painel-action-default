@@ -5,7 +5,7 @@
       </span>
         </a>
     <ul class="treeview-menu">
-        <li><a href="#"><i class="fa  fa-newspaper-o"></i> Posts </a></li>
+        <li><a href="{{ route('post.criar') }}"><i class="fa  fa-newspaper-o"></i> Posts </a></li>
         <li><a href="#"><i class="fa  fa-folder-o"></i> Categorias</a></li>
         <li><a href="#"><i class="fa  fa-commenting"></i> <span>Comentarios</span></a></li>
     </ul>
