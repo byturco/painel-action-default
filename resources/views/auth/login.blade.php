@@ -11,7 +11,7 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <h2 align="center">Action! Solucoes Tecnologicas</h2>
+        <h2 align="center">BDMG</h2>
       <p class="login-box-msg">Entre para iniciar a sessão</p>
 
       <form action="{{ route('autenticar') }}" method="post">
@@ -34,7 +34,7 @@
               </div>
               <!-- /.col -->
               <div class="col-xs-4">
-                  <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+                  <button type="submit" class="btn btn-success btn-block btn-flat">Entrar</button>
               </div>
               <!-- /.col -->
           </div>

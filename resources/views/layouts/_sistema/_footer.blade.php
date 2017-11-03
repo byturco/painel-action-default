@@ -4,5 +4,5 @@
 	    Anything you want
 	  </div>
 	  <!-- Default to the left -->
-	  <strong>Copyright &copy; {{ date('Y') }} <a href="#">Action S.T.</a></strong> Todos os direitos reservado.
+	  <strong>Copyright &copy; {{ date('Y') }} <a href="#">BDMG</a></strong> Todos os direitos reservado.
 </footer>

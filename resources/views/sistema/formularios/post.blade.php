@@ -4,7 +4,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-     Adicionar novo post
+     <i class="fa fa-eye"></i> Detalhes do projeto
       <!-- <small>Optional description</small>-->
   </h1>
   <ol class="breadcrumb">

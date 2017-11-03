@@ -14,9 +14,23 @@ class RoleSeeder extends Seeder
     {
         $role = new Role();
         $role->create([
-            'name' => 'Administrador',
-            'slug' => 'admin',
-            'description' => 'Tem todos os privilegios da aplicacao'
+            'name' => 'Banco',
+            'slug' => 'banco',
+            'description' => ''
+        ]);
+
+        $role = new Role();
+        $role->create([
+            'name' => 'Integrador',
+            'slug' => 'integrador',
+            'description' => ''
+        ]);
+
+        $role = new Role();
+        $role->create([
+            'name' => 'Cliente',
+            'slug' => 'cliente',
+            'description' => ''
         ]);
 
     }
